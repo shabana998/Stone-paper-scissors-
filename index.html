@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Stone Paper Scissor Game</h1>
+        <div class="theme">
+            <button class="btn">Change Theme</button>
+        </div>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="stone">
+            <img src="rock1.jpg" alt="rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper1.jpg" alt="paper">
+        </div>
+        <div class="choice" id="scissor">
+            <img id="scissor-img" src="scissor1.jpg" alt="Scissor">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>Player</p>
+        </div>
+        <div class="score">
+            <p id="computer-score">0</p>
+            <p>Computer</p>
+        </div>
+    </div>
+    <div class="highest-score">
+        <span>Highest Score : </span>
+        <p id="Highest">User Score</p>
+    </div>
+    <div class="msg-container">
+        <p id="msg">Play Your Move</p>
+    </div>
+    <div id="wing-animation"></div> <!-- Added container for wing animation -->
+    <script src="logic.js"></script>
+</body>
+</html>

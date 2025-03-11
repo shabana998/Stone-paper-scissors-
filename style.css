@@ -1,0 +1,152 @@
+/* Existing CSS */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-left: 400px;
+}
+.choice {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#scissor-img {
+    object-fit: cover;
+}
+.choices {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.choice:hover {
+    cursor: pointer;
+    background-color: rgba(16, 49, 138, 0.826);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#user-score,
+#computer-score {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.score-board {
+    margin-top: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    padding: 5px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 150px;
+}
+#msg {
+    font-size: 2rem;
+    background-color: rgba(36, 31, 31, 0.94);
+    color: white;
+    display: inline;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 800;
+}
+.msg-container {
+    margin-top: 3rem;
+}
+.score :last-child {
+    background-color: rgba(162, 96, 193, 0.887);
+    border-radius: 1rem;
+    color: white;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.highest-score {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 2.5rem;
+}
+.theme {
+    margin-top: .5rem;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: flex-end;
+}
+.btn {
+    font-size: 1rem;
+    height: 2rem;
+    border-radius: .5rem;
+    background-color: whitesmoke;
+    font-weight: 550;
+}
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    height: 4rem;
+    align-items: center;
+    background-color: rgb(26, 19, 76);
+}
+.theme {
+    margin-left: 300px;
+    margin-right: 0px;
+}
+
+/* New CSS for wing animation */
+#wing-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wing.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none; /* Prevents interaction with the animation layer */
+}
+
+.animate-wing {
+    animation: wingAnimation 2s forwards;
+}
+
+@keyframes wingAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
